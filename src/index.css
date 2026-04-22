@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8f9fa] text-[#191c1d] antialiased;
+  }
+}
+
+@layer components {
+  .glass-gradient {
+    @apply bg-gradient-to-br from-[#005bbf] to-[#1a73e8];
+  }
+  
+  .ghost-border {
+    @apply outline outline-1 outline-[#c1c6d6]/15;
+  }
+}
