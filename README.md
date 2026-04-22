@@ -20,8 +20,8 @@ Please ensure you have the following installed:
  2. npm or yarn
 
 Installation & Setup :-
-- Clone the repository: 
-- Navigate to the project directory: 
+- Clone the repository: git clone git@github.com:jha94/TaskManager.git
+- Navigate to the project directory: cd TaskManager
 - Install dependencies: npm install
 - Start the development server: npm run dev
 
