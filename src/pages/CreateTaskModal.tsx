@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { useTask } from "../context/TaskContext";
 import {
   ModelHeader,
@@ -13,7 +13,7 @@ export default function CreateTaskModal() {
   const [errors, setErrors] = useState<{ title?: string; dueDate?: string }>(
     {},
   );
-  const handleSubmit = (e: React.InputEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const title = formData.get("title") as string;

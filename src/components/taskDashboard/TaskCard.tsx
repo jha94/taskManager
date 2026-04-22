@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
 import { Goal, Target, Edit3, Trash2, Calendar } from "lucide-react";
+import { useTask } from "@/src/context/TaskContext";
 const TaskCard = (props) => {
-  const { task, index, openModal, deleteTask, updateStatus } = props;
+  const { task, index } = props;
+  const { openModal, deleteTask, updateStatus } = useTask();
 
   return (
     <motion.div

@@ -1,5 +1,7 @@
+import { useTask } from "@/src/context/TaskContext";
 const ModelButton = (props) => {
-  const { closeModal, editId } = props;
+  const { editId } = props;
+  const { closeModal } = useTask();
   return (
     <div className="flex items-center justify-end gap-4 pt-4">
       <button

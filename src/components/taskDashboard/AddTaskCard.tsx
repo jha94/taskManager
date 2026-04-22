@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
 import { Plus } from "lucide-react";
-const AddTaskCard = (props) => {
-  const { openModal } = props;
+import { useTask } from "@/src/context/TaskContext";
+const AddTaskCard = () => {
+  const { openModal } = useTask();
   return (
     <motion.button
-      onClick={openModal}
+      onClick={() => openModal()}
       whileHover={{ scale: 1.01 }}
       whileTap={{ scale: 0.98 }}
       className="group bg-white p-6 rounded-xl ghost-border border-2 border-dashed border-[#c1c6d6]/30 flex flex-col items-center justify-center min-h-[160px] cursor-pointer hover:border-[#005bbf]/50"

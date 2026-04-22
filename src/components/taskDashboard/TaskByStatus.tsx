@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
-const TaskByStatus = (props) => {
-  const { stats } = props;
+import { useTask } from "@/src/context/TaskContext";
+import { getTaskStats } from "@/src/utils";
+const TaskByStatus = () => {
+  const { tasks } = useTask();
+  const stats = getTaskStats(tasks);
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
       {stats.map((stat, i) => (

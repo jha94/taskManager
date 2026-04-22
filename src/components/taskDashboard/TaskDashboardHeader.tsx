@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
-const TaskDashboardHeader = (props) => {
-  const { openModal } = props;
+import { useTask } from "@/src/context/TaskContext";
+const TaskDashboardHeader = () => {
+  const { openModal } = useTask();
   return (
     <div className="flex flex-col md:flex-row md:items-end justify-between py-8 gap-4">
       <div>
@@ -12,7 +13,7 @@ const TaskDashboardHeader = (props) => {
         </h2>
       </div>
       <button
-        onClick={openModal}
+        onClick={() => openModal()}
         className="px-6 py-3 glass-gradient text-white font-bold rounded-full shadow-lg shadow-[#005bbf]/20 hover:scale-[1.02] transition-transform flex items-center gap-2"
       >
         <Plus size={20} />
